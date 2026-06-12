@@ -1,0 +1,256 @@
+[
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "0.75KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "1.1KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "1.5KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "2.2KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "3KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "3.7KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "4KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "4.7KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "5.5KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "7.5KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "10KW",
+    "PDF": "600W X 800H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "11KW",
+    "PDF": "600W X 800H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "15KW",
+    "PDF": "800W X 1000H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "1W+1S",
+    "kW": "18.5KW",
+    "PDF": "800W X 1000H X 300D.pdf"
+  },
+
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "0.75KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "1.1KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "1.5KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "2.2KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "3KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "3.7KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "4KW",
+    "PDF": "500W X 700H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "4.7KW",
+    "PDF": "600W X 800H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "5.5KW",
+    "PDF": "600W X 800H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "7.5KW",
+    "PDF": "600W X 800H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "10KW",
+    "PDF": "800W X 1000H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "11KW",
+    "PDF": "800W X 1000H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "15KW",
+    "PDF": "1000W X 1200H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "2W+1S",
+    "kW": "18.5KW",
+    "PDF": "1000W X 1200H X 300D.pdf"
+  },
+
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "0.75KW",
+    "PDF": "600W X 600H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "1.1KW",
+    "PDF": "600W X 600H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "1.5KW",
+    "PDF": "600W X 600H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "2.2KW",
+    "PDF": "600W X 600H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "3KW",
+    "PDF": "600W X 600H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "3.7KW",
+    "PDF": "600W X 600H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "4KW",
+    "PDF": "600W X 600H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "4.7KW",
+    "PDF": "800W X 1000H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "5.5KW",
+    "PDF": "800W X 1000H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "7.5KW",
+    "PDF": "800W X 1000H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "10KW",
+    "PDF": "1000W X 1000H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "11KW",
+    "PDF": "1000W X 1000H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "15KW",
+    "PDF": "1200W X 1400H X 300D.pdf"
+  },
+  {
+    "Model": "M-SER",
+    "Type": "3W+1S",
+    "kW": "18.5KW",
+    "PDF": "1200W X 1400H X 300D.pdf"
+  }
+]
