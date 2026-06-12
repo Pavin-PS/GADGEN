@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GAD Generator</title>
+
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f5f5f5;
+            padding:30px;
+        }
+
+        .container{
+            width:400px;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+            box-sizing:border-box;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#0078d7;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#005ea6;
+        }
+
+        #status{
+            margin-top:15px;
+            color:red;
+            white-space:pre-line;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>GA Drawing Generator</h2>
+
+    <label>Model</label>
+    <input type="text" id="model" placeholder="M-SER">
+
+    <label>Type</label>
+    <input type="text" id="type" placeholder="1W+1S">
+
+    <label>kW</label>
+    <input type="text" id="kw" placeholder="0.75KW">
+
+    <button onclick="generatePDF()">
+        Generate PDF
+    </button>
+
+    <div id="status"></div>
+
+</div>
+
+<script>
+
+async function generatePDF(){
+
+    try{
+
+        document.getElementById("status").innerHTML = "Searching...";
+
+        const model = document.getElementById("model").value.trim();
+        const type  = document.getElementById("type").value.trim();
+        const kw    = document.getElementById("kw").value.trim();
+
+        const response = await fetch("data.json");
+        const data = await response.json();
+
+        const result = data.find(item =>
+            item.Model.toUpperCase() === model.toUpperCase() &&
+            item.Type.toUpperCase()  === type.toUpperCase() &&
+            item.kW.toUpperCase()    === kw.toUpperCase()
+        );
+
+        if(!result){
+            document.getElementById("status").innerHTML =
+                "No matching PDF found";
+            return;
+        }
+
+        const pdfPath = result.PDF;
+
+        const existingPdfBytes =
+            await fetch(pdfPath).then(r => r.arrayBuffer());
+
+        const pdfDoc =
+            await PDFLib.PDFDocument.load(existingPdfBytes);
+
+        const page = pdfDoc.getPages()[0];
+
+        const pageWidth = page.getWidth();
+        const pageHeight = page.getHeight();
+
+        document.getElementById("status").innerHTML =
+            "PDF Found\n" +
+            "Width : " + pageWidth + "\n" +
+            "Height: " + pageHeight;
+
+        const font =
+            await pdfDoc.embedFont(
+                PDFLib.StandardFonts.HelveticaBold
+            );
+
+        // Debug Box
+        // page.drawRectangle({
+        //     x: pageWidth - 534,
+        //     y: pageHeight - 458,
+        //     width: 450,
+        //     height: 100,
+        //     borderWidth: 2
+        // });
+
+        // Main Title
+        page.drawText("GA DRAWING", {
+    x: 80,
+    y: 550,
+    size: 22,
+    font,
+    rotate: PDFLib.degrees(90)
+});
+
+page.drawText(`${model} ${kw} ${type}`, {
+    x: 100,
+    y: 550,
+    size: 14,
+    font,
+    rotate: PDFLib.degrees(90)
+});
+
+        const pdfBytes = await pdfDoc.save();
+
+        const blob = new Blob(
+            [pdfBytes],
+            { type: "application/pdf" }
+        );
+
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download =
+            `${model}_${kw}_${type}.pdf`;
+
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+
+        URL.revokeObjectURL(url);
+
+        document.getElementById("status").innerHTML +=
+            "\nPDF Generated Successfully";
+
+    }
+    catch(err){
+
+        console.error(err);
+
+        document.getElementById("status").innerHTML =
+            "Error:\n" + err.message;
+    }
+}
+
+</script>
+
+</body>
+</html>
