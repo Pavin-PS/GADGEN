@@ -115,9 +115,9 @@ async function generatePDF(){
         const pageHeight = page.getHeight();
 
         document.getElementById("status").innerHTML =
-            "PDF Found\n" +
-            "Width : " + pageWidth + "\n" +
-            "Height: " + pageHeight;
+            "PDF Found\n";
+            // "Width : " + pageWidth + "\n" +
+            // "Height: " + pageHeight;
 
         const font =
             await pdfDoc.embedFont(
