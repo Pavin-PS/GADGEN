@@ -57,7 +57,7 @@
     <h2>GA Drawing Generator</h2>
 
     <label>Model</label>
-    <input type="text" id="model" placeholder="M-SER">
+    <input type="text" id="model" value="5M-SER" placeholder="M-SER">
 
     <label>Type</label>
     <input type="text" id="type" placeholder="1W+1S">
@@ -84,6 +84,7 @@ async function generatePDF(){
         const model = document.getElementById("model").value.trim();
         const type  = document.getElementById("type").value.trim();
         const kw    = document.getElementById("kw").value.trim();
+
 
         const response = await fetch("data.json");
         const data = await response.json();
@@ -134,19 +135,19 @@ async function generatePDF(){
 
         // Main Title
         page.drawText("GA DRAWING", {
-    x: 80,
-    y: 550,
+    x: 580,
+    y: 500,
     size: 22,
     font,
-    rotate: PDFLib.degrees(90)
+    rotate: PDFLib.degrees(0)
 });
 
 page.drawText(`${model} ${kw} ${type}`, {
-    x: 100,
-    y: 550,
+    x: 580,
+    y: 480,
     size: 14,
     font,
-    rotate: PDFLib.degrees(90)
+    rotate: PDFLib.degrees(0)
 });
 
         const pdfBytes = await pdfDoc.save();
